@@ -124,6 +124,7 @@ class Lexer:
                 self.advance()
                 return [], IllegalCharError(pos_start, self.pos,"'" + char + "'")
 
+        # no 'return tokens, errors', as if error happens it is going to be returned in else: above.
         return tokens, None
     
     def make_number(self):
