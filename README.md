@@ -7,7 +7,15 @@ We are writing our own programming language for our univeristy course. For now, 
 
 ## Project structure:
 
-- shell.py --> contains the main loop of our compiler
-- basic.py --> contains lexer (scanner) with all stated tokens.
+- shell.py ----> contains the main loop of our compiler taking input
+- basic.py ----> contains logic of the project
+- lexer.py ----> contains lexer (scanner) and errors for scanning
+- parser.py ----> contains parser
+- tokens.py ----> contains all tokens
+- syntax.py ----> contains code generating html file
+
+------------
+- input.txt ----> contains code to analyse
+- output.html ----> containes coloured input
 - resources/images 
 - readme.md
