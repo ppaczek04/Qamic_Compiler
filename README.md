@@ -1,21 +1,17 @@
 # Qamic_Compiler
 Writing our own programming language as a project for my univeristy laboratory.
 ![Qamic logo](resources/images/Qamic_logo.png) 
+
 ## Introduction
-We are writing our own programming language for our univeristy course. For now, our lexer can interpret text file into tokens an print them out, including error handling (so if lexer cant interpret sth, info about where and what happened will be returned).
+Qamic is a custom-designed programming language focused on clarity and minimalism. This repository contains the implementation of the Qamic Compiler, which parses, analyzes, and compiles source code written in Qamic.
 
+🌟 Language Features
+Clean syntax inspired by modern high-level languages
 
-## Project structure:
+Strongly typed with static type checking
 
-- shell.py  ----> contains the main loop of our compiler taking input and giving result or error as output
-- basic.py  ----> contains logic of the project
-- lexer.py  ----> contains lexer (scanner) and errors for scanning
-- parser.py ----> contains parser
-- tokens.py ----> contains all tokens
-- syntax.py ----> contains code generating html file (colored output)
+Support for variables, expressions, and control structures
 
-------------
-- input.txt   ----> contains code to analyse
-- output.html ----> contains coloured input
-- resources/images 
-- readme.md
+Custom grammar defined using formal grammar rules
+
+Designed for educational and experimental purposes
