@@ -1,120 +1,105 @@
-// Młodzieżowy Python (yoScript)
 grammar YoScript;
 
-// ===== Lexer Rules =====
-// Tokeny
-NUMBER: '-'? ('0' | [1-9][0-9]*)( '.' [0-9]+ )? ( ('e' | 'E') [+-]? [0-9]+ )?;
-STRING: '"' ( '\\' . | ~["\\] )* '"' | '\'' ( '\\' . | ~['\\] )* '\'';
-BOOLEAN_LITERAL: 'tru' | 'nope';
+// ───── Lexer ─────────────────────────────────────────
 
-// Operatory
-PLUS: '+';
-MINUS: '-';
-STAR: '*';
-SLASH: '/';
-LESS: '<';
-GREATER: '>';
-EQUAL: '=';
-EQEQUAL: '==';
-LESSEQUAL: '<=';
-GREATEREQUAL: '>=';
+// literały
+NUMBER          : '-'? ( '0' | [1-9] [0-9]* ) ( '.' [0-9]+ )?;
+STRING          : '"' ( '\\' . | ~["\\] )* '"' | '\'' ( '\\' . | ~['\\] )* '\'';
 
-// Znaki interpunkcyjne
-COLON: ':';
-COMMA: ',';
-DOT: '.';
-SEMI: ';';
+// słowa-klucze (najdłuższe najpierw)
+FORREAL         : 'forreal';      // def-funkcji
+FOR             : 'for';          // pętla
+IF              : 'if';
+IDK             : 'idk';          // else
+NAHH            : 'nahh';         // break
+GOBACK          : 'goback';       // return
+IN              : 'in';
 
-// Nawiasy
-OPEN_PAREN: '(';
-CLOSE_PAREN: ')';
-OPEN_BRACE: '{';
-CLOSE_BRACE: '}';
-OPEN_BRACKET: '[';
-CLOSE_BRACKET: ']';
+// operatory i delimitery
+PLUS            : '+';
+MINUS           : '-';
+STAR            : '*';
+SLASH           : '/';
+EQEQUAL         : '==';
+NOTEQUAL        : '!=';
+EQUAL           : '=';
+OPEN_PAREN      : '(';
+CLOSE_PAREN     : ')';
+OPEN_BRACE      : '{';
+CLOSE_BRACE     : '}';
+OPEN_BRACKET    : '[';            // ★ dla listy
+CLOSE_BRACKET   : ']';
+COMMA           : ',';
+COLON           : ':';
+DOT             : '.';
 
-// Słowa kluczowe
-BREAK: 'nahh';
-ELSE: 'else';
-RETURN: 'ima';
-CONTINUE: 'goon';
-DEF: 'function';
-IF: 'if';
-WHILE: 'while';
-FOR: 'forreal';
-CLASS: 'class';
-IN: 'in';
+// typy (minimum)
+INT             : 'int';
+STR             : 'str';
+BOOLEAN         : 'bool';
+NONE            : 'none';
 
-// Typy
-INT_TYPE: 'int';
-STR_TYPE: 'str';
-FLOAT_TYPE: 'float';
-BOOL_TYPE: 'bool';
+// identyfikatory / whitespace
+IDENTIFIER      : [a-zA-Z_][a-zA-Z0-9_]*;
+NEWLINE         : '\r'? '\n';
+WS              : [ \t]+ -> skip;
+COMMENT         : '#' ~[\r\n]* -> skip;
 
-IDENTIFIER: [a-zA-Z_][a-zA-Z0-9_]*;
-NEWLINE: '\r'? '\n';
-WS: [ \t]+ -> skip;
-COMMENT: '#' ~[\r\n]* -> skip;
+// ───── Parser ─────────────────────────────────────────
 
-// ===== Parser Rules =====
-program: statements EOF;
+program         : statements EOF ;
 
-statements: NEWLINE* statement (NEWLINE+ statement)* NEWLINE*;
+// ogólna sekwencja instrukcji
+statements      : NEWLINE* statement (NEWLINE+ statement)* NEWLINE* ;
 
 statement
-    : expression_statement
-    | assignment_statement
-    | reassignment_statement
-    | if_statement
-    | while_statement
-    | for_statement
-    | function_definition
-    | return_statement;
+    : expression_stmt
+    | assignment
+    | if_stmt
+    | for_stmt
+    | break_stmt            // ← już działa
+    | return_stmt           // ← już działa
+    | func_def
+    | COMMENT
+    ;
 
-expression_statement: expression NEWLINE?;
+// ─── proste ─────────────────
+expression_stmt : expression NEWLINE? ;
+assignment      : IDENTIFIER EQUAL expression NEWLINE? ;
 
-assignment_statement: IDENTIFIER COLON type EQUAL expression SEMI?;
+// ─── sterowanie ─────────────
+if_stmt         : IF cond_block (IDK alt_block)? ;
+cond_block      : expression OPEN_BRACE NEWLINE statements CLOSE_BRACE NEWLINE? ;
+alt_block       : OPEN_BRACE NEWLINE statements CLOSE_BRACE NEWLINE? ;
+break_stmt      : NAHH NEWLINE? ;
+return_stmt     : GOBACK expression? NEWLINE? ;
 
-reassignment_statement: IDENTIFIER EQUAL expression SEMI?;
+// ─── pętla for ──────────────
+for_stmt        : FOR IDENTIFIER IN expression
+                  OPEN_BRACE NEWLINE statements CLOSE_BRACE NEWLINE? ;
 
-if_statement: IF expression OPEN_BRACE NEWLINE statements CLOSE_BRACE NEWLINE? (ELSE OPEN_BRACE NEWLINE statements CLOSE_BRACE)?;
+// ─── funkcje ────────────────
+func_def        : FORREAL IDENTIFIER OPEN_PAREN param_list? CLOSE_PAREN
+                  OPEN_BRACE NEWLINE statements CLOSE_BRACE ;
+param_list      : IDENTIFIER (COMMA IDENTIFIER)* ;
 
-while_statement: WHILE expression OPEN_BRACE NEWLINE statements CLOSE_BRACE;
+// ─── wyrażenia ──────────────
+expression      : term ((PLUS | MINUS) term)* ;
+term            : factor ((STAR | SLASH) factor)* ;
+factor          : atom | (PLUS | MINUS) factor ;
 
-for_statement: FOR IDENTIFIER IN expression OPEN_BRACE NEWLINE statements CLOSE_BRACE;
-
-function_definition: DEF IDENTIFIER OPEN_PAREN typed_parameters? CLOSE_PAREN OPEN_BRACE NEWLINE statements CLOSE_BRACE;
-
-typed_parameters: typed_parameter (COMMA typed_parameter)*;
-
-typed_parameter: IDENTIFIER COLON type;
-
-return_statement: RETURN expression? SEMI?;
-
-expression_list: expression (COMMA expression)*;
-
-expression: primary (operator primary)*;
-
-operator
-    : PLUS
-    | MINUS
-    | STAR
-    | SLASH
-    | LESS
-    | GREATER
-    | EQEQUAL
-    | LESSEQUAL
-    | GREATEREQUAL;
-
-primary
+atom
     : IDENTIFIER
     | NUMBER
     | STRING
-    | BOOLEAN_LITERAL
+    | list_literal
+    | function_call
     | OPEN_PAREN expression CLOSE_PAREN
-    | OPEN_BRACKET expression_list? CLOSE_BRACKET
-    | function_call;
+    ;
 
-function_call: IDENTIFIER OPEN_PAREN expression_list? CLOSE_PAREN;
+// literał listy  [1, 2, 3]
+list_literal    : OPEN_BRACKET (expression (COMMA expression)*)? CLOSE_BRACKET ;
 
-type: INT_TYPE | STR_TYPE | FLOAT_TYPE | BOOL_TYPE;
+// wywołanie funkcji
+function_call   : IDENTIFIER OPEN_PAREN arg_list? CLOSE_PAREN ;
+arg_list        : expression (COMMA expression)* ;

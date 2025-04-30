@@ -35,102 +35,93 @@ class YoScriptListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#expression_statement.
-    def enterExpression_statement(self, ctx:YoScriptParser.Expression_statementContext):
+    # Enter a parse tree produced by YoScriptParser#expression_stmt.
+    def enterExpression_stmt(self, ctx:YoScriptParser.Expression_stmtContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#expression_statement.
-    def exitExpression_statement(self, ctx:YoScriptParser.Expression_statementContext):
-        pass
-
-
-    # Enter a parse tree produced by YoScriptParser#assignment_statement.
-    def enterAssignment_statement(self, ctx:YoScriptParser.Assignment_statementContext):
-        pass
-
-    # Exit a parse tree produced by YoScriptParser#assignment_statement.
-    def exitAssignment_statement(self, ctx:YoScriptParser.Assignment_statementContext):
+    # Exit a parse tree produced by YoScriptParser#expression_stmt.
+    def exitExpression_stmt(self, ctx:YoScriptParser.Expression_stmtContext):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#reassignment_statement.
-    def enterReassignment_statement(self, ctx:YoScriptParser.Reassignment_statementContext):
+    # Enter a parse tree produced by YoScriptParser#assignment.
+    def enterAssignment(self, ctx:YoScriptParser.AssignmentContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#reassignment_statement.
-    def exitReassignment_statement(self, ctx:YoScriptParser.Reassignment_statementContext):
-        pass
-
-
-    # Enter a parse tree produced by YoScriptParser#if_statement.
-    def enterIf_statement(self, ctx:YoScriptParser.If_statementContext):
-        pass
-
-    # Exit a parse tree produced by YoScriptParser#if_statement.
-    def exitIf_statement(self, ctx:YoScriptParser.If_statementContext):
+    # Exit a parse tree produced by YoScriptParser#assignment.
+    def exitAssignment(self, ctx:YoScriptParser.AssignmentContext):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#while_statement.
-    def enterWhile_statement(self, ctx:YoScriptParser.While_statementContext):
+    # Enter a parse tree produced by YoScriptParser#if_stmt.
+    def enterIf_stmt(self, ctx:YoScriptParser.If_stmtContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#while_statement.
-    def exitWhile_statement(self, ctx:YoScriptParser.While_statementContext):
-        pass
-
-
-    # Enter a parse tree produced by YoScriptParser#for_statement.
-    def enterFor_statement(self, ctx:YoScriptParser.For_statementContext):
-        pass
-
-    # Exit a parse tree produced by YoScriptParser#for_statement.
-    def exitFor_statement(self, ctx:YoScriptParser.For_statementContext):
+    # Exit a parse tree produced by YoScriptParser#if_stmt.
+    def exitIf_stmt(self, ctx:YoScriptParser.If_stmtContext):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#function_definition.
-    def enterFunction_definition(self, ctx:YoScriptParser.Function_definitionContext):
+    # Enter a parse tree produced by YoScriptParser#cond_block.
+    def enterCond_block(self, ctx:YoScriptParser.Cond_blockContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#function_definition.
-    def exitFunction_definition(self, ctx:YoScriptParser.Function_definitionContext):
-        pass
-
-
-    # Enter a parse tree produced by YoScriptParser#typed_parameters.
-    def enterTyped_parameters(self, ctx:YoScriptParser.Typed_parametersContext):
-        pass
-
-    # Exit a parse tree produced by YoScriptParser#typed_parameters.
-    def exitTyped_parameters(self, ctx:YoScriptParser.Typed_parametersContext):
+    # Exit a parse tree produced by YoScriptParser#cond_block.
+    def exitCond_block(self, ctx:YoScriptParser.Cond_blockContext):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#typed_parameter.
-    def enterTyped_parameter(self, ctx:YoScriptParser.Typed_parameterContext):
+    # Enter a parse tree produced by YoScriptParser#alt_block.
+    def enterAlt_block(self, ctx:YoScriptParser.Alt_blockContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#typed_parameter.
-    def exitTyped_parameter(self, ctx:YoScriptParser.Typed_parameterContext):
-        pass
-
-
-    # Enter a parse tree produced by YoScriptParser#return_statement.
-    def enterReturn_statement(self, ctx:YoScriptParser.Return_statementContext):
-        pass
-
-    # Exit a parse tree produced by YoScriptParser#return_statement.
-    def exitReturn_statement(self, ctx:YoScriptParser.Return_statementContext):
+    # Exit a parse tree produced by YoScriptParser#alt_block.
+    def exitAlt_block(self, ctx:YoScriptParser.Alt_blockContext):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#expression_list.
-    def enterExpression_list(self, ctx:YoScriptParser.Expression_listContext):
+    # Enter a parse tree produced by YoScriptParser#break_stmt.
+    def enterBreak_stmt(self, ctx:YoScriptParser.Break_stmtContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#expression_list.
-    def exitExpression_list(self, ctx:YoScriptParser.Expression_listContext):
+    # Exit a parse tree produced by YoScriptParser#break_stmt.
+    def exitBreak_stmt(self, ctx:YoScriptParser.Break_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by YoScriptParser#return_stmt.
+    def enterReturn_stmt(self, ctx:YoScriptParser.Return_stmtContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#return_stmt.
+    def exitReturn_stmt(self, ctx:YoScriptParser.Return_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by YoScriptParser#for_stmt.
+    def enterFor_stmt(self, ctx:YoScriptParser.For_stmtContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#for_stmt.
+    def exitFor_stmt(self, ctx:YoScriptParser.For_stmtContext):
+        pass
+
+
+    # Enter a parse tree produced by YoScriptParser#func_def.
+    def enterFunc_def(self, ctx:YoScriptParser.Func_defContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#func_def.
+    def exitFunc_def(self, ctx:YoScriptParser.Func_defContext):
+        pass
+
+
+    # Enter a parse tree produced by YoScriptParser#param_list.
+    def enterParam_list(self, ctx:YoScriptParser.Param_listContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#param_list.
+    def exitParam_list(self, ctx:YoScriptParser.Param_listContext):
         pass
 
 
@@ -143,21 +134,39 @@ class YoScriptListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#operator.
-    def enterOperator(self, ctx:YoScriptParser.OperatorContext):
+    # Enter a parse tree produced by YoScriptParser#term.
+    def enterTerm(self, ctx:YoScriptParser.TermContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#operator.
-    def exitOperator(self, ctx:YoScriptParser.OperatorContext):
+    # Exit a parse tree produced by YoScriptParser#term.
+    def exitTerm(self, ctx:YoScriptParser.TermContext):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#primary.
-    def enterPrimary(self, ctx:YoScriptParser.PrimaryContext):
+    # Enter a parse tree produced by YoScriptParser#factor.
+    def enterFactor(self, ctx:YoScriptParser.FactorContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#primary.
-    def exitPrimary(self, ctx:YoScriptParser.PrimaryContext):
+    # Exit a parse tree produced by YoScriptParser#factor.
+    def exitFactor(self, ctx:YoScriptParser.FactorContext):
+        pass
+
+
+    # Enter a parse tree produced by YoScriptParser#atom.
+    def enterAtom(self, ctx:YoScriptParser.AtomContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#atom.
+    def exitAtom(self, ctx:YoScriptParser.AtomContext):
+        pass
+
+
+    # Enter a parse tree produced by YoScriptParser#list_literal.
+    def enterList_literal(self, ctx:YoScriptParser.List_literalContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#list_literal.
+    def exitList_literal(self, ctx:YoScriptParser.List_literalContext):
         pass
 
 
@@ -170,12 +179,12 @@ class YoScriptListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#type.
-    def enterType(self, ctx:YoScriptParser.TypeContext):
+    # Enter a parse tree produced by YoScriptParser#arg_list.
+    def enterArg_list(self, ctx:YoScriptParser.Arg_listContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#type.
-    def exitType(self, ctx:YoScriptParser.TypeContext):
+    # Exit a parse tree produced by YoScriptParser#arg_list.
+    def exitArg_list(self, ctx:YoScriptParser.Arg_listContext):
         pass
 
 

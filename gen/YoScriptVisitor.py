@@ -24,58 +24,53 @@ class YoScriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#expression_statement.
-    def visitExpression_statement(self, ctx:YoScriptParser.Expression_statementContext):
+    # Visit a parse tree produced by YoScriptParser#expression_stmt.
+    def visitExpression_stmt(self, ctx:YoScriptParser.Expression_stmtContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#assignment_statement.
-    def visitAssignment_statement(self, ctx:YoScriptParser.Assignment_statementContext):
+    # Visit a parse tree produced by YoScriptParser#assignment.
+    def visitAssignment(self, ctx:YoScriptParser.AssignmentContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#reassignment_statement.
-    def visitReassignment_statement(self, ctx:YoScriptParser.Reassignment_statementContext):
+    # Visit a parse tree produced by YoScriptParser#if_stmt.
+    def visitIf_stmt(self, ctx:YoScriptParser.If_stmtContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#if_statement.
-    def visitIf_statement(self, ctx:YoScriptParser.If_statementContext):
+    # Visit a parse tree produced by YoScriptParser#cond_block.
+    def visitCond_block(self, ctx:YoScriptParser.Cond_blockContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#while_statement.
-    def visitWhile_statement(self, ctx:YoScriptParser.While_statementContext):
+    # Visit a parse tree produced by YoScriptParser#alt_block.
+    def visitAlt_block(self, ctx:YoScriptParser.Alt_blockContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#for_statement.
-    def visitFor_statement(self, ctx:YoScriptParser.For_statementContext):
+    # Visit a parse tree produced by YoScriptParser#break_stmt.
+    def visitBreak_stmt(self, ctx:YoScriptParser.Break_stmtContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#function_definition.
-    def visitFunction_definition(self, ctx:YoScriptParser.Function_definitionContext):
+    # Visit a parse tree produced by YoScriptParser#return_stmt.
+    def visitReturn_stmt(self, ctx:YoScriptParser.Return_stmtContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#typed_parameters.
-    def visitTyped_parameters(self, ctx:YoScriptParser.Typed_parametersContext):
+    # Visit a parse tree produced by YoScriptParser#for_stmt.
+    def visitFor_stmt(self, ctx:YoScriptParser.For_stmtContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#typed_parameter.
-    def visitTyped_parameter(self, ctx:YoScriptParser.Typed_parameterContext):
+    # Visit a parse tree produced by YoScriptParser#func_def.
+    def visitFunc_def(self, ctx:YoScriptParser.Func_defContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#return_statement.
-    def visitReturn_statement(self, ctx:YoScriptParser.Return_statementContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by YoScriptParser#expression_list.
-    def visitExpression_list(self, ctx:YoScriptParser.Expression_listContext):
+    # Visit a parse tree produced by YoScriptParser#param_list.
+    def visitParam_list(self, ctx:YoScriptParser.Param_listContext):
         return self.visitChildren(ctx)
 
 
@@ -84,13 +79,23 @@ class YoScriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#operator.
-    def visitOperator(self, ctx:YoScriptParser.OperatorContext):
+    # Visit a parse tree produced by YoScriptParser#term.
+    def visitTerm(self, ctx:YoScriptParser.TermContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#primary.
-    def visitPrimary(self, ctx:YoScriptParser.PrimaryContext):
+    # Visit a parse tree produced by YoScriptParser#factor.
+    def visitFactor(self, ctx:YoScriptParser.FactorContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by YoScriptParser#atom.
+    def visitAtom(self, ctx:YoScriptParser.AtomContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by YoScriptParser#list_literal.
+    def visitList_literal(self, ctx:YoScriptParser.List_literalContext):
         return self.visitChildren(ctx)
 
 
@@ -99,8 +104,8 @@ class YoScriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#type.
-    def visitType(self, ctx:YoScriptParser.TypeContext):
+    # Visit a parse tree produced by YoScriptParser#arg_list.
+    def visitArg_list(self, ctx:YoScriptParser.Arg_listContext):
         return self.visitChildren(ctx)
 
 
