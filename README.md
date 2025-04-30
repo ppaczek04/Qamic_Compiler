@@ -71,7 +71,16 @@ Expected output:
 | `EQUAL`      | `=`        | assignment               |
 | `NUMBER`     | `123.45`   | number                   |
 | `STRING`     | `"abc"`    | string                   |
-| `IDENTIFIER` | `x`        | variable/function name   |
+| `IDENTIFIER`  | `x`        | variable or function name        |
+| `OPEN_PAREN`  | `(`        | start of parameter list/grouping |
+| `CLOSE_PAREN` | `)`        | end of parameter list/grouping   |
+| `OPEN_BRACE`  | `{`        | block start                      |
+| `CLOSE_BRACE` | `}`        | block end                        |
+| `OPEN_BRACKET`| `[`        | list start                       |
+| `CLOSE_BRACKET`| `]`       | list end                         |
+| `COMMA`       | `,`        | separator                        |
+| `COLON`       | `:`        | used in type annotations         |
+| `DOT`         | `.`        | attribute/method access          |
 
 ---
 
