@@ -1,32 +1,33 @@
 # YoScript
 
-**YoScript** (aka *Youth Python*) – humorystyczny, uproszczony dialekt Pythona używany do ćwiczeń z gramatyk i narzędzia ANTLR 4.  
-Zamiast klasycznych słów-kluczy używa slangu (np. `forreal`, `nahh`), a bloki kodu ograniczane są klamrami `{}` – bez wcięć.
+**YoScript** is a fun, simplified Python-inspired language created for learning compiler construction with ANTLR 4.  
+It uses youth-style slang for keywords (e.g., `forreal`, `nahh`, `goback`) and curly braces `{}` for blocks instead of indentation, making parsing easier and more flexible.
 
 ---
 
-## 🚀 Jak uruchomić
+## 🚀 How to Run
 
-### 1. Wymagania
+### 1. Requirements
 - Java 11+
-- ANTLR 4.13.x (np. `antlr-4.13.2-complete.jar`)
-- Python 3 + `antlr4-python3-runtime`
+- ANTLR 4.13.x (e.g. `antlr-4.13.2-complete.jar`)
+- Python 3 with `antlr4-python3-runtime` (if using Python target)
 
-### 2. Generowanie parsera (Python target)
+### 2. Generating the Lexer and Parser (Python target)
 ```bash
 alias antlr4='java -jar ~/tools/antlr-4.13.2-complete.jar'
 
 antlr4 -Dlanguage=Python3 -visitor YoScript.g4
 ```
 
-Wygeneruje m.in.:
+This generates:
 - `YoScriptLexer.py`
 - `YoScriptParser.py`
 - `YoScriptVisitor.py`
+- `YoScript.tokens`
 
 ---
 
-## 🧪 Przykładowy program
+## 🧪 Example Program
 
 ```youthpy
 forreal timesTwo(x) {
@@ -42,7 +43,7 @@ for n in nums {
 }
 ```
 
-Oczekiwane wyjście:
+Expected output:
 ```
 2
 4
@@ -50,51 +51,51 @@ Oczekiwane wyjście:
 
 ---
 
-## 📜 Tokeny języka
+## 📜 Token Reference
 
-| Token        | Lexem     | Znaczenie               |
-|--------------|-----------|--------------------------|
-| `FORREAL`    | `forreal` | definicja funkcji        |
-| `FOR`        | `for`     | pętla `for`              |
-| `IF`         | `if`      | instrukcja warunkowa     |
-| `IDK`        | `idk`     | gałąź `else`             |
-| `NAHH`       | `nahh`    | `break`                  |
-| `GOBACK`     | `goback`  | `return`                 |
-| `IN`         | `in`      | składnia pętli           |
-| `PLUS`       | `+`       | dodawanie                |
-| `MINUS`      | `-`       | odejmowanie              |
-| `STAR`       | `*`       | mnożenie                 |
-| `SLASH`      | `/`       | dzielenie                |
-| `EQEQUAL`    | `==`      | porównanie               |
-| `NOTEQUAL`   | `!=`      | różne                    |
-| `EQUAL`      | `=`       | przypisanie              |
-| `NUMBER`     | `123.45`  | liczba                   |
-| `STRING`     | `"abc"`   | łańcuch znaków           |
-| `IDENTIFIER` | `x`       | identyfikator            |
+| Token        | Lexeme     | Meaning                 |
+|--------------|------------|--------------------------|
+| `FORREAL`    | `forreal`  | function definition      |
+| `FOR`        | `for`      | loop                     |
+| `IF`         | `if`       | condition                |
+| `IDK`        | `idk`      | else block               |
+| `NAHH`       | `nahh`     | break                    |
+| `GOBACK`     | `goback`   | return                   |
+| `IN`         | `in`       | loop keyword             |
+| `PLUS`       | `+`        | addition                 |
+| `MINUS`      | `-`        | subtraction              |
+| `STAR`       | `*`        | multiplication           |
+| `SLASH`      | `/`        | division                 |
+| `EQEQUAL`    | `==`       | equality comparison      |
+| `NOTEQUAL`   | `!=`       | inequality comparison    |
+| `EQUAL`      | `=`        | assignment               |
+| `NUMBER`     | `123.45`   | number                   |
+| `STRING`     | `"abc"`    | string                   |
+| `IDENTIFIER` | `x`        | variable/function name   |
 
 ---
 
-## 📁 Struktura katalogu
+## 📁 Project Structure
 
 ```
 .
-├── YoScript.g4           # plik gramatyki ANTLR
-├── YoScriptLexer.py      # lexer (wygenerowany)
-├── YoScriptParser.py     # parser (wygenerowany)
-├── YoScriptVisitor.py    # visitor (wygenerowany)
-├── run_youthpy.py        # interpreter (Twoja implementacja)
+├── YoScript.g4           # ANTLR grammar
+├── YoScriptLexer.py      # generated lexer
+├── YoScriptParser.py     # generated parser
+├── YoScriptVisitor.py    # generated visitor base class
+├── run_youthpy.py        # your custom interpreter (to implement)
 └── examples/
-    └── demo.youthpy      # przykładowy kod
+    └── demo.youthpy       # sample YoScript file
 ```
 
 ---
 
-## 🛠️ Uruchomienie własnego programu
+## 🛠️ Running your own program
 
-1. Zapisz kod w pliku `examples/demo.youthpy`
-2. Uruchom interpreter:
+1. Write code in `examples/demo.youthpy`
+2. Run it with:
 ```bash
 python run_youthpy.py examples/demo.youthpy
 ```
 
-Miłej zabawy z **YoScript**! 😎
+Have fun with **YoScript**! 😎
