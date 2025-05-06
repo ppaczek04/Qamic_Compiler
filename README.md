@@ -104,7 +104,7 @@ Expected output:
 1. Write code in `examples/demo.youthpy`
 2. Run it with:
 ```bash
-python run_youthpy.py examples/demo.youthpy
+python run_youthpy.py examples/example4
 ```
 
 Have fun with **YoScript**! 😎
