@@ -34,14 +34,17 @@ class RuntimeVisitor(YoScriptVisitor):
         return self.visit(ctx.expression())
 
     def visitExpression(self, ctx):
-        left = self.visit(ctx.term(0))
-        for i in range(1, len(ctx.term())):
+        return self.visit(ctx.comparison())
+    
+    def visitComparison(self, ctx):
+        left = self.visit(ctx.arithmetic(0))
+        for i in range(1, len(ctx.arithmetic())):
             op = ctx.getChild(2 * i - 1).getText()
-            right = self.visit(ctx.term(i))
-            if op == '+':
-                left += right
-            elif op == '-':
-                left -= right
+            right = self.visit(ctx.arithmetic(i))
+            if op == '==':
+                left = float(left == right)
+            elif op == '!=':
+                left = float(left != right)
         return left
 
     def visitTerm(self, ctx):

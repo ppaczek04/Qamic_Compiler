@@ -37,7 +37,7 @@ forreal timesTwo(x) {
 nums = [1, 2, 3]
 for n in nums {
     print(timesTwo(n))
-    if n == 2 {
+    if (n == 2) {
         nahh
     }
 }

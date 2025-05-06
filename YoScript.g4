@@ -84,9 +84,11 @@ func_def        : FORREAL IDENTIFIER OPEN_PAREN param_list? CLOSE_PAREN
 param_list      : IDENTIFIER (COMMA IDENTIFIER)* ;
 
 // ─── wyrażenia ──────────────
-expression      : term ((PLUS | MINUS) term)* ;
-term            : factor ((STAR | SLASH) factor)* ;
-factor          : atom | (PLUS | MINUS) factor ;
+expression : comparison ;
+comparison : arithmetic ((EQEQUAL | NOTEQUAL) arithmetic)* ;
+arithmetic : term ((PLUS | MINUS) term)* ;
+term       : factor ((STAR | SLASH) factor)* ;
+factor     : atom | (PLUS | MINUS) factor ;
 
 atom
     : IDENTIFIER

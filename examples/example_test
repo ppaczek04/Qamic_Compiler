@@ -1,0 +1,55 @@
+# Funkcja do mnożenia przez dwa
+forreal timesTwo(x) {
+    goback x * 2
+}
+
+# Funkcja testująca konkretną wartość
+forreal isSpecial(n) {
+    if (n == 3) {
+        goback 1
+    }
+    idk {
+        goback 0
+    }
+}
+
+# Funkcja bez parametrów
+forreal greet() {
+    print("Welcome to YoScript!")
+}
+
+# Przypisanie listy
+nums = [1, 2, 3, 4]
+
+# Wywołanie funkcji bez argumentów
+greet()
+
+# Pętla + funkcje + if + idk + break
+for n in nums {
+    doubled = timesTwo(n)
+    print("n:", n, "doubled:", doubled)
+
+    if (isSpecial(n) == 1) {
+        print(n, "is special!")
+    }
+    idk {
+        print(n, "is not special.")
+    }
+
+    if (n == 4) {
+        print("Breaking at", n)
+        nahh
+    }
+}
+
+# Proste obliczenia
+a = 10
+b = 2
+print("a + b =", a + b)
+print("a - b =", a - b)
+print("a * b =", a * b)
+print("a / b =", a / b)
+
+# Porównania
+print("a == b:", a == b)
+print("a != b:", a != b)

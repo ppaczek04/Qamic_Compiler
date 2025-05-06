@@ -79,6 +79,16 @@ class YoScriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by YoScriptParser#comparison.
+    def visitComparison(self, ctx:YoScriptParser.ComparisonContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by YoScriptParser#arithmetic.
+    def visitArithmetic(self, ctx:YoScriptParser.ArithmeticContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by YoScriptParser#term.
     def visitTerm(self, ctx:YoScriptParser.TermContext):
         return self.visitChildren(ctx)

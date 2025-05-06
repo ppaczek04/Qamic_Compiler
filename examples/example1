@@ -1,5 +1,11 @@
-n = 2
+forreal timesTwo(x) {
+    goback x * 2
+}
 
-if (2) {
-    print("bla")
+nums = [1, 2, 3]
+for n in nums {
+    print(timesTwo(n))
+    if (n == 2) {
+        nahh
+    }
 }

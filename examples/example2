@@ -1,0 +1,4 @@
+forreal hello() {
+    print("hi")
+}
+hello()

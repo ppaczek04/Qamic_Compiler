@@ -134,6 +134,24 @@ class YoScriptListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by YoScriptParser#comparison.
+    def enterComparison(self, ctx:YoScriptParser.ComparisonContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#comparison.
+    def exitComparison(self, ctx:YoScriptParser.ComparisonContext):
+        pass
+
+
+    # Enter a parse tree produced by YoScriptParser#arithmetic.
+    def enterArithmetic(self, ctx:YoScriptParser.ArithmeticContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#arithmetic.
+    def exitArithmetic(self, ctx:YoScriptParser.ArithmeticContext):
+        pass
+
+
     # Enter a parse tree produced by YoScriptParser#term.
     def enterTerm(self, ctx:YoScriptParser.TermContext):
         pass
