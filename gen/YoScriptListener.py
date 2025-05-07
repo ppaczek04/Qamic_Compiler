@@ -1,4 +1,4 @@
-# Generated from YoScript.g4 by ANTLR 4.13.2
+# Generated from C:/Studia/Kompilatory_projekt/YoScript.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .YoScriptParser import YoScriptParser
@@ -53,6 +53,15 @@ class YoScriptListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by YoScriptParser#block.
+    def enterBlock(self, ctx:YoScriptParser.BlockContext):
+        pass
+
+    # Exit a parse tree produced by YoScriptParser#block.
+    def exitBlock(self, ctx:YoScriptParser.BlockContext):
+        pass
+
+
     # Enter a parse tree produced by YoScriptParser#if_stmt.
     def enterIf_stmt(self, ctx:YoScriptParser.If_stmtContext):
         pass
@@ -62,21 +71,12 @@ class YoScriptListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by YoScriptParser#cond_block.
-    def enterCond_block(self, ctx:YoScriptParser.Cond_blockContext):
+    # Enter a parse tree produced by YoScriptParser#cond_paren.
+    def enterCond_paren(self, ctx:YoScriptParser.Cond_parenContext):
         pass
 
-    # Exit a parse tree produced by YoScriptParser#cond_block.
-    def exitCond_block(self, ctx:YoScriptParser.Cond_blockContext):
-        pass
-
-
-    # Enter a parse tree produced by YoScriptParser#alt_block.
-    def enterAlt_block(self, ctx:YoScriptParser.Alt_blockContext):
-        pass
-
-    # Exit a parse tree produced by YoScriptParser#alt_block.
-    def exitAlt_block(self, ctx:YoScriptParser.Alt_blockContext):
+    # Exit a parse tree produced by YoScriptParser#cond_paren.
+    def exitCond_paren(self, ctx:YoScriptParser.Cond_parenContext):
         pass
 
 

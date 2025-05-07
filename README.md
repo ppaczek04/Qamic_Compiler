@@ -88,13 +88,14 @@ Expected output:
 
 ```
 .
+├── gen/
+|   ├── YoScriptLexer.py           # ANTLR generated lexer, parser etc.
+|   └── ...
 ├── YoScript.g4           # ANTLR grammar
-├── YoScriptLexer.py      # generated lexer
-├── YoScriptParser.py     # generated parser
-├── YoScriptVisitor.py    # generated visitor base class
-├── run_youthpy.py        # your custom interpreter (to implement)
+├── RuntimeVisitor.py     # our own Visitor
+├── run.py                # your custom interpreter (to implement)
 └── examples/
-    └── demo.youthpy       # sample YoScript file
+    └── example1       # sample YoScript file
 ```
 
 ---
@@ -104,7 +105,7 @@ Expected output:
 1. Write code in `Qamic_Compiler`
 2. Run it with:
 ```bash
-python run_youthpy.py examples/example4
+python RuntimeVisitor.py examples/example4
 ```
 
 Have fun with **YoScript**! 😎

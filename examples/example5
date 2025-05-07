@@ -1,0 +1,9 @@
+forreal foo(a, b) {
+  if (a == b) {
+    goback [1,2,3]
+  } idk {
+    goback
+  }
+}
+
+print(foo(1, 2))

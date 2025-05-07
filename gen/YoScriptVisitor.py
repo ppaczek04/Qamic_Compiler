@@ -1,4 +1,4 @@
-# Generated from YoScript.g4 by ANTLR 4.13.2
+# Generated from C:/Studia/Kompilatory_projekt/YoScript.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .YoScriptParser import YoScriptParser
@@ -34,18 +34,18 @@ class YoScriptVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by YoScriptParser#block.
+    def visitBlock(self, ctx:YoScriptParser.BlockContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by YoScriptParser#if_stmt.
     def visitIf_stmt(self, ctx:YoScriptParser.If_stmtContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by YoScriptParser#cond_block.
-    def visitCond_block(self, ctx:YoScriptParser.Cond_blockContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by YoScriptParser#alt_block.
-    def visitAlt_block(self, ctx:YoScriptParser.Alt_blockContext):
+    # Visit a parse tree produced by YoScriptParser#cond_paren.
+    def visitCond_paren(self, ctx:YoScriptParser.Cond_parenContext):
         return self.visitChildren(ctx)
 
 
