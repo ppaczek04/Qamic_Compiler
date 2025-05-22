@@ -1,0 +1,2 @@
+forreal foo(a, b) { goback a + b }
+foo(1, 2, 3)

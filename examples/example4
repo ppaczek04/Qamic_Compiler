@@ -1,6 +1,9 @@
-if (1 == 1) {
-    print("nope")
-}
-idk {
-    print("yep")
+x = 2
+
+if (x == 1) {
+    print("the value of x is 1")
+}tho (x == 2) {
+    print("the value of x is 2")
+}idk {
+    print("the value of x is different")
 }

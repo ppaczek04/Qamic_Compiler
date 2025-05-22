@@ -12,8 +12,8 @@ statement
     | assignment
     | if_stmt
     | for_stmt
-    | break_stmt            // ← już działa
-    | return_stmt           // ← już działa
+    | break_stmt
+    | return_stmt
     | func_def
     ;
 
@@ -22,8 +22,10 @@ expression_stmt : expression NEWLINE? ;
 assignment      : IDENTIFIER EQUAL expression NEWLINE? ;
 
 // ─── sterowanie ─────────────
-block           : OPEN_BRACE NEWLINE* statements NEWLINE* CLOSE_BRACE NEWLINE? ;
-if_stmt         : IF cond_paren block (IDK block)? ;
+block           : OPEN_BRACE NEWLINE* statements NEWLINE* CLOSE_BRACE;
+if_stmt         : IF cond_paren NEWLINE? block
+                    (NEWLINE? THO cond_paren NEWLINE? block)*
+                    (NEWLINE? IDK NEWLINE? block)? ;
 cond_paren      : OPEN_PAREN expression CLOSE_PAREN ;
 break_stmt      : NAHH NEWLINE? ;
 return_stmt     : GOBACK expression? NEWLINE? ;
@@ -32,7 +34,7 @@ return_stmt     : GOBACK expression? NEWLINE? ;
 for_stmt        : FOR IDENTIFIER IN expression block ;
 
 // ─── funkcje ────────────────
-func_def        : FORREAL IDENTIFIER OPEN_PAREN param_list? CLOSE_PAREN block NEWLINE? ;
+func_def        : FORREAL IDENTIFIER OPEN_PAREN param_list? CLOSE_PAREN NEWLINE? block NEWLINE? ;
 param_list      : IDENTIFIER (COMMA IDENTIFIER)* ;
 
 // ─── wyrażenia ──────────────
@@ -46,6 +48,8 @@ atom
     : IDENTIFIER
     | NUMBER
     | STRING
+    | TRUE
+    | FALSE
     | list_literal
     | function_call
     | OPEN_PAREN expression CLOSE_PAREN
@@ -63,11 +67,14 @@ arg_list        : expression (COMMA expression)* ;
 // literały
 NUMBER          : '-'? ( '0' | [1-9] [0-9]* ) ( '.' [0-9]+ )?;
 STRING          : '"' ( '\\' . | ~["\\] )* '"' | '\'' ( '\\' . | ~['\\] )* '\'';
+TRUE             : 'yep';
+FALSE            : 'nope';
 
 // słowa-klucze (najdłuższe najpierw)
 FORREAL         : 'forreal';      // def-funkcji
 FOR             : 'for';          // pętla
 IF              : 'if';
+THO             : 'tho';
 IDK             : 'idk';          // else
 NAHH            : 'nahh';         // break
 GOBACK          : 'goback';       // return
@@ -85,7 +92,7 @@ OPEN_PAREN      : '(';
 CLOSE_PAREN     : ')';
 OPEN_BRACE      : '{';
 CLOSE_BRACE     : '}';
-OPEN_BRACKET    : '[';            // ★ dla listy
+OPEN_BRACKET    : '[';
 CLOSE_BRACKET   : ']';
 COMMA           : ',';
 COLON           : ':';

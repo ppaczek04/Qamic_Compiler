@@ -10,85 +10,97 @@ else:
 
 def serializedATN():
     return [
-        4,1,33,226,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,36,253,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
         7,20,2,21,7,21,1,0,1,0,1,0,1,1,5,1,49,8,1,10,1,12,1,52,9,1,1,1,1,
         1,4,1,56,8,1,11,1,12,1,57,1,1,5,1,61,8,1,10,1,12,1,64,9,1,1,1,5,
         1,67,8,1,10,1,12,1,70,9,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,79,8,2,
         1,3,1,3,3,3,83,8,3,1,4,1,4,1,4,1,4,3,4,89,8,4,1,5,1,5,5,5,93,8,5,
-        10,5,12,5,96,9,5,1,5,1,5,5,5,100,8,5,10,5,12,5,103,9,5,1,5,1,5,3,
-        5,107,8,5,1,6,1,6,1,6,1,6,1,6,3,6,114,8,6,1,7,1,7,1,7,1,7,1,8,1,
-        8,3,8,122,8,8,1,9,1,9,3,9,126,8,9,1,9,3,9,129,8,9,1,10,1,10,1,10,
-        1,10,1,10,1,10,1,11,1,11,1,11,1,11,3,11,141,8,11,1,11,1,11,1,11,
-        3,11,146,8,11,1,12,1,12,1,12,5,12,151,8,12,10,12,12,12,154,9,12,
-        1,13,1,13,1,14,1,14,1,14,5,14,161,8,14,10,14,12,14,164,9,14,1,15,
-        1,15,1,15,5,15,169,8,15,10,15,12,15,172,9,15,1,16,1,16,1,16,5,16,
-        177,8,16,10,16,12,16,180,9,16,1,17,1,17,1,17,3,17,185,8,17,1,18,
-        1,18,1,18,1,18,1,18,1,18,1,18,1,18,1,18,3,18,196,8,18,1,19,1,19,
-        1,19,1,19,5,19,202,8,19,10,19,12,19,205,9,19,3,19,207,8,19,1,19,
-        1,19,1,20,1,20,1,20,3,20,214,8,20,1,20,1,20,1,21,1,21,1,21,5,21,
-        221,8,21,10,21,12,21,224,9,21,1,21,0,0,22,0,2,4,6,8,10,12,14,16,
-        18,20,22,24,26,28,30,32,34,36,38,40,42,0,3,1,0,14,15,1,0,10,11,1,
-        0,12,13,238,0,44,1,0,0,0,2,50,1,0,0,0,4,78,1,0,0,0,6,80,1,0,0,0,
-        8,84,1,0,0,0,10,90,1,0,0,0,12,108,1,0,0,0,14,115,1,0,0,0,16,119,
-        1,0,0,0,18,123,1,0,0,0,20,130,1,0,0,0,22,136,1,0,0,0,24,147,1,0,
-        0,0,26,155,1,0,0,0,28,157,1,0,0,0,30,165,1,0,0,0,32,173,1,0,0,0,
-        34,184,1,0,0,0,36,195,1,0,0,0,38,197,1,0,0,0,40,210,1,0,0,0,42,217,
-        1,0,0,0,44,45,3,2,1,0,45,46,5,0,0,1,46,1,1,0,0,0,47,49,5,31,0,0,
-        48,47,1,0,0,0,49,52,1,0,0,0,50,48,1,0,0,0,50,51,1,0,0,0,51,53,1,
-        0,0,0,52,50,1,0,0,0,53,62,3,4,2,0,54,56,5,31,0,0,55,54,1,0,0,0,56,
-        57,1,0,0,0,57,55,1,0,0,0,57,58,1,0,0,0,58,59,1,0,0,0,59,61,3,4,2,
-        0,60,55,1,0,0,0,61,64,1,0,0,0,62,60,1,0,0,0,62,63,1,0,0,0,63,68,
-        1,0,0,0,64,62,1,0,0,0,65,67,5,31,0,0,66,65,1,0,0,0,67,70,1,0,0,0,
-        68,66,1,0,0,0,68,69,1,0,0,0,69,3,1,0,0,0,70,68,1,0,0,0,71,79,3,6,
-        3,0,72,79,3,8,4,0,73,79,3,12,6,0,74,79,3,20,10,0,75,79,3,16,8,0,
-        76,79,3,18,9,0,77,79,3,22,11,0,78,71,1,0,0,0,78,72,1,0,0,0,78,73,
-        1,0,0,0,78,74,1,0,0,0,78,75,1,0,0,0,78,76,1,0,0,0,78,77,1,0,0,0,
-        79,5,1,0,0,0,80,82,3,26,13,0,81,83,5,31,0,0,82,81,1,0,0,0,82,83,
-        1,0,0,0,83,7,1,0,0,0,84,85,5,30,0,0,85,86,5,16,0,0,86,88,3,26,13,
-        0,87,89,5,31,0,0,88,87,1,0,0,0,88,89,1,0,0,0,89,9,1,0,0,0,90,94,
-        5,19,0,0,91,93,5,31,0,0,92,91,1,0,0,0,93,96,1,0,0,0,94,92,1,0,0,
-        0,94,95,1,0,0,0,95,97,1,0,0,0,96,94,1,0,0,0,97,101,3,2,1,0,98,100,
-        5,31,0,0,99,98,1,0,0,0,100,103,1,0,0,0,101,99,1,0,0,0,101,102,1,
-        0,0,0,102,104,1,0,0,0,103,101,1,0,0,0,104,106,5,20,0,0,105,107,5,
-        31,0,0,106,105,1,0,0,0,106,107,1,0,0,0,107,11,1,0,0,0,108,109,5,
-        5,0,0,109,110,3,14,7,0,110,113,3,10,5,0,111,112,5,6,0,0,112,114,
-        3,10,5,0,113,111,1,0,0,0,113,114,1,0,0,0,114,13,1,0,0,0,115,116,
-        5,17,0,0,116,117,3,26,13,0,117,118,5,18,0,0,118,15,1,0,0,0,119,121,
-        5,7,0,0,120,122,5,31,0,0,121,120,1,0,0,0,121,122,1,0,0,0,122,17,
-        1,0,0,0,123,125,5,8,0,0,124,126,3,26,13,0,125,124,1,0,0,0,125,126,
-        1,0,0,0,126,128,1,0,0,0,127,129,5,31,0,0,128,127,1,0,0,0,128,129,
-        1,0,0,0,129,19,1,0,0,0,130,131,5,4,0,0,131,132,5,30,0,0,132,133,
-        5,9,0,0,133,134,3,26,13,0,134,135,3,10,5,0,135,21,1,0,0,0,136,137,
-        5,3,0,0,137,138,5,30,0,0,138,140,5,17,0,0,139,141,3,24,12,0,140,
-        139,1,0,0,0,140,141,1,0,0,0,141,142,1,0,0,0,142,143,5,18,0,0,143,
-        145,3,10,5,0,144,146,5,31,0,0,145,144,1,0,0,0,145,146,1,0,0,0,146,
-        23,1,0,0,0,147,152,5,30,0,0,148,149,5,23,0,0,149,151,5,30,0,0,150,
-        148,1,0,0,0,151,154,1,0,0,0,152,150,1,0,0,0,152,153,1,0,0,0,153,
-        25,1,0,0,0,154,152,1,0,0,0,155,156,3,28,14,0,156,27,1,0,0,0,157,
-        162,3,30,15,0,158,159,7,0,0,0,159,161,3,30,15,0,160,158,1,0,0,0,
-        161,164,1,0,0,0,162,160,1,0,0,0,162,163,1,0,0,0,163,29,1,0,0,0,164,
-        162,1,0,0,0,165,170,3,32,16,0,166,167,7,1,0,0,167,169,3,32,16,0,
-        168,166,1,0,0,0,169,172,1,0,0,0,170,168,1,0,0,0,170,171,1,0,0,0,
-        171,31,1,0,0,0,172,170,1,0,0,0,173,178,3,34,17,0,174,175,7,2,0,0,
-        175,177,3,34,17,0,176,174,1,0,0,0,177,180,1,0,0,0,178,176,1,0,0,
-        0,178,179,1,0,0,0,179,33,1,0,0,0,180,178,1,0,0,0,181,185,3,36,18,
-        0,182,183,7,1,0,0,183,185,3,34,17,0,184,181,1,0,0,0,184,182,1,0,
-        0,0,185,35,1,0,0,0,186,196,5,30,0,0,187,196,5,1,0,0,188,196,5,2,
-        0,0,189,196,3,38,19,0,190,196,3,40,20,0,191,192,5,17,0,0,192,193,
-        3,26,13,0,193,194,5,18,0,0,194,196,1,0,0,0,195,186,1,0,0,0,195,187,
-        1,0,0,0,195,188,1,0,0,0,195,189,1,0,0,0,195,190,1,0,0,0,195,191,
-        1,0,0,0,196,37,1,0,0,0,197,206,5,21,0,0,198,203,3,26,13,0,199,200,
-        5,23,0,0,200,202,3,26,13,0,201,199,1,0,0,0,202,205,1,0,0,0,203,201,
-        1,0,0,0,203,204,1,0,0,0,204,207,1,0,0,0,205,203,1,0,0,0,206,198,
-        1,0,0,0,206,207,1,0,0,0,207,208,1,0,0,0,208,209,5,22,0,0,209,39,
-        1,0,0,0,210,211,5,30,0,0,211,213,5,17,0,0,212,214,3,42,21,0,213,
-        212,1,0,0,0,213,214,1,0,0,0,214,215,1,0,0,0,215,216,5,18,0,0,216,
-        41,1,0,0,0,217,222,3,26,13,0,218,219,5,23,0,0,219,221,3,26,13,0,
-        220,218,1,0,0,0,221,224,1,0,0,0,222,220,1,0,0,0,222,223,1,0,0,0,
-        223,43,1,0,0,0,224,222,1,0,0,0,26,50,57,62,68,78,82,88,94,101,106,
-        113,121,125,128,140,145,152,162,170,178,184,195,203,206,213,222
+        10,5,12,5,96,9,5,1,5,1,5,5,5,100,8,5,10,5,12,5,103,9,5,1,5,1,5,1,
+        6,1,6,1,6,3,6,110,8,6,1,6,1,6,3,6,114,8,6,1,6,1,6,1,6,3,6,119,8,
+        6,1,6,1,6,5,6,123,8,6,10,6,12,6,126,9,6,1,6,3,6,129,8,6,1,6,1,6,
+        3,6,133,8,6,1,6,3,6,136,8,6,1,7,1,7,1,7,1,7,1,8,1,8,3,8,144,8,8,
+        1,9,1,9,3,9,148,8,9,1,9,3,9,151,8,9,1,10,1,10,1,10,1,10,1,10,1,10,
+        1,11,1,11,1,11,1,11,3,11,163,8,11,1,11,1,11,3,11,167,8,11,1,11,1,
+        11,3,11,171,8,11,1,12,1,12,1,12,5,12,176,8,12,10,12,12,12,179,9,
+        12,1,13,1,13,1,14,1,14,1,14,5,14,186,8,14,10,14,12,14,189,9,14,1,
+        15,1,15,1,15,5,15,194,8,15,10,15,12,15,197,9,15,1,16,1,16,1,16,5,
+        16,202,8,16,10,16,12,16,205,9,16,1,17,1,17,1,17,3,17,210,8,17,1,
+        18,1,18,1,18,1,18,1,18,1,18,1,18,1,18,1,18,1,18,1,18,3,18,223,8,
+        18,1,19,1,19,1,19,1,19,5,19,229,8,19,10,19,12,19,232,9,19,3,19,234,
+        8,19,1,19,1,19,1,20,1,20,1,20,3,20,241,8,20,1,20,1,20,1,21,1,21,
+        1,21,5,21,248,8,21,10,21,12,21,251,9,21,1,21,0,0,22,0,2,4,6,8,10,
+        12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,0,3,1,0,17,18,1,
+        0,13,14,1,0,15,16,273,0,44,1,0,0,0,2,50,1,0,0,0,4,78,1,0,0,0,6,80,
+        1,0,0,0,8,84,1,0,0,0,10,90,1,0,0,0,12,106,1,0,0,0,14,137,1,0,0,0,
+        16,141,1,0,0,0,18,145,1,0,0,0,20,152,1,0,0,0,22,158,1,0,0,0,24,172,
+        1,0,0,0,26,180,1,0,0,0,28,182,1,0,0,0,30,190,1,0,0,0,32,198,1,0,
+        0,0,34,209,1,0,0,0,36,222,1,0,0,0,38,224,1,0,0,0,40,237,1,0,0,0,
+        42,244,1,0,0,0,44,45,3,2,1,0,45,46,5,0,0,1,46,1,1,0,0,0,47,49,5,
+        34,0,0,48,47,1,0,0,0,49,52,1,0,0,0,50,48,1,0,0,0,50,51,1,0,0,0,51,
+        53,1,0,0,0,52,50,1,0,0,0,53,62,3,4,2,0,54,56,5,34,0,0,55,54,1,0,
+        0,0,56,57,1,0,0,0,57,55,1,0,0,0,57,58,1,0,0,0,58,59,1,0,0,0,59,61,
+        3,4,2,0,60,55,1,0,0,0,61,64,1,0,0,0,62,60,1,0,0,0,62,63,1,0,0,0,
+        63,68,1,0,0,0,64,62,1,0,0,0,65,67,5,34,0,0,66,65,1,0,0,0,67,70,1,
+        0,0,0,68,66,1,0,0,0,68,69,1,0,0,0,69,3,1,0,0,0,70,68,1,0,0,0,71,
+        79,3,6,3,0,72,79,3,8,4,0,73,79,3,12,6,0,74,79,3,20,10,0,75,79,3,
+        16,8,0,76,79,3,18,9,0,77,79,3,22,11,0,78,71,1,0,0,0,78,72,1,0,0,
+        0,78,73,1,0,0,0,78,74,1,0,0,0,78,75,1,0,0,0,78,76,1,0,0,0,78,77,
+        1,0,0,0,79,5,1,0,0,0,80,82,3,26,13,0,81,83,5,34,0,0,82,81,1,0,0,
+        0,82,83,1,0,0,0,83,7,1,0,0,0,84,85,5,33,0,0,85,86,5,19,0,0,86,88,
+        3,26,13,0,87,89,5,34,0,0,88,87,1,0,0,0,88,89,1,0,0,0,89,9,1,0,0,
+        0,90,94,5,22,0,0,91,93,5,34,0,0,92,91,1,0,0,0,93,96,1,0,0,0,94,92,
+        1,0,0,0,94,95,1,0,0,0,95,97,1,0,0,0,96,94,1,0,0,0,97,101,3,2,1,0,
+        98,100,5,34,0,0,99,98,1,0,0,0,100,103,1,0,0,0,101,99,1,0,0,0,101,
+        102,1,0,0,0,102,104,1,0,0,0,103,101,1,0,0,0,104,105,5,23,0,0,105,
+        11,1,0,0,0,106,107,5,7,0,0,107,109,3,14,7,0,108,110,5,34,0,0,109,
+        108,1,0,0,0,109,110,1,0,0,0,110,111,1,0,0,0,111,124,3,10,5,0,112,
+        114,5,34,0,0,113,112,1,0,0,0,113,114,1,0,0,0,114,115,1,0,0,0,115,
+        116,5,8,0,0,116,118,3,14,7,0,117,119,5,34,0,0,118,117,1,0,0,0,118,
+        119,1,0,0,0,119,120,1,0,0,0,120,121,3,10,5,0,121,123,1,0,0,0,122,
+        113,1,0,0,0,123,126,1,0,0,0,124,122,1,0,0,0,124,125,1,0,0,0,125,
+        135,1,0,0,0,126,124,1,0,0,0,127,129,5,34,0,0,128,127,1,0,0,0,128,
+        129,1,0,0,0,129,130,1,0,0,0,130,132,5,9,0,0,131,133,5,34,0,0,132,
+        131,1,0,0,0,132,133,1,0,0,0,133,134,1,0,0,0,134,136,3,10,5,0,135,
+        128,1,0,0,0,135,136,1,0,0,0,136,13,1,0,0,0,137,138,5,20,0,0,138,
+        139,3,26,13,0,139,140,5,21,0,0,140,15,1,0,0,0,141,143,5,10,0,0,142,
+        144,5,34,0,0,143,142,1,0,0,0,143,144,1,0,0,0,144,17,1,0,0,0,145,
+        147,5,11,0,0,146,148,3,26,13,0,147,146,1,0,0,0,147,148,1,0,0,0,148,
+        150,1,0,0,0,149,151,5,34,0,0,150,149,1,0,0,0,150,151,1,0,0,0,151,
+        19,1,0,0,0,152,153,5,6,0,0,153,154,5,33,0,0,154,155,5,12,0,0,155,
+        156,3,26,13,0,156,157,3,10,5,0,157,21,1,0,0,0,158,159,5,5,0,0,159,
+        160,5,33,0,0,160,162,5,20,0,0,161,163,3,24,12,0,162,161,1,0,0,0,
+        162,163,1,0,0,0,163,164,1,0,0,0,164,166,5,21,0,0,165,167,5,34,0,
+        0,166,165,1,0,0,0,166,167,1,0,0,0,167,168,1,0,0,0,168,170,3,10,5,
+        0,169,171,5,34,0,0,170,169,1,0,0,0,170,171,1,0,0,0,171,23,1,0,0,
+        0,172,177,5,33,0,0,173,174,5,26,0,0,174,176,5,33,0,0,175,173,1,0,
+        0,0,176,179,1,0,0,0,177,175,1,0,0,0,177,178,1,0,0,0,178,25,1,0,0,
+        0,179,177,1,0,0,0,180,181,3,28,14,0,181,27,1,0,0,0,182,187,3,30,
+        15,0,183,184,7,0,0,0,184,186,3,30,15,0,185,183,1,0,0,0,186,189,1,
+        0,0,0,187,185,1,0,0,0,187,188,1,0,0,0,188,29,1,0,0,0,189,187,1,0,
+        0,0,190,195,3,32,16,0,191,192,7,1,0,0,192,194,3,32,16,0,193,191,
+        1,0,0,0,194,197,1,0,0,0,195,193,1,0,0,0,195,196,1,0,0,0,196,31,1,
+        0,0,0,197,195,1,0,0,0,198,203,3,34,17,0,199,200,7,2,0,0,200,202,
+        3,34,17,0,201,199,1,0,0,0,202,205,1,0,0,0,203,201,1,0,0,0,203,204,
+        1,0,0,0,204,33,1,0,0,0,205,203,1,0,0,0,206,210,3,36,18,0,207,208,
+        7,1,0,0,208,210,3,34,17,0,209,206,1,0,0,0,209,207,1,0,0,0,210,35,
+        1,0,0,0,211,223,5,33,0,0,212,223,5,1,0,0,213,223,5,2,0,0,214,223,
+        5,3,0,0,215,223,5,4,0,0,216,223,3,38,19,0,217,223,3,40,20,0,218,
+        219,5,20,0,0,219,220,3,26,13,0,220,221,5,21,0,0,221,223,1,0,0,0,
+        222,211,1,0,0,0,222,212,1,0,0,0,222,213,1,0,0,0,222,214,1,0,0,0,
+        222,215,1,0,0,0,222,216,1,0,0,0,222,217,1,0,0,0,222,218,1,0,0,0,
+        223,37,1,0,0,0,224,233,5,24,0,0,225,230,3,26,13,0,226,227,5,26,0,
+        0,227,229,3,26,13,0,228,226,1,0,0,0,229,232,1,0,0,0,230,228,1,0,
+        0,0,230,231,1,0,0,0,231,234,1,0,0,0,232,230,1,0,0,0,233,225,1,0,
+        0,0,233,234,1,0,0,0,234,235,1,0,0,0,235,236,5,25,0,0,236,39,1,0,
+        0,0,237,238,5,33,0,0,238,240,5,20,0,0,239,241,3,42,21,0,240,239,
+        1,0,0,0,240,241,1,0,0,0,241,242,1,0,0,0,242,243,5,21,0,0,243,41,
+        1,0,0,0,244,249,3,26,13,0,245,246,5,26,0,0,246,248,3,26,13,0,247,
+        245,1,0,0,0,248,251,1,0,0,0,249,247,1,0,0,0,249,250,1,0,0,0,250,
+        43,1,0,0,0,251,249,1,0,0,0,32,50,57,62,68,78,82,88,94,101,109,113,
+        118,124,128,132,135,143,147,150,162,166,170,177,187,195,203,209,
+        222,230,233,240,249
     ]
 
 class YoScriptParser ( Parser ):
@@ -101,19 +113,19 @@ class YoScriptParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "'forreal'", 
-                     "'for'", "'if'", "'idk'", "'nahh'", "'goback'", "'in'", 
-                     "'+'", "'-'", "'*'", "'/'", "'=='", "'!='", "'='", 
-                     "'('", "')'", "'{'", "'}'", "'['", "']'", "','", "':'", 
-                     "'.'", "'int'", "'str'", "'bool'", "'none'" ]
+    literalNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "'yep'", "'nope'", 
+                     "'forreal'", "'for'", "'if'", "'tho'", "'idk'", "'nahh'", 
+                     "'goback'", "'in'", "'+'", "'-'", "'*'", "'/'", "'=='", 
+                     "'!='", "'='", "'('", "')'", "'{'", "'}'", "'['", "']'", 
+                     "','", "':'", "'.'", "'int'", "'str'", "'bool'", "'none'" ]
 
-    symbolicNames = [ "<INVALID>", "NUMBER", "STRING", "FORREAL", "FOR", 
-                      "IF", "IDK", "NAHH", "GOBACK", "IN", "PLUS", "MINUS", 
-                      "STAR", "SLASH", "EQEQUAL", "NOTEQUAL", "EQUAL", "OPEN_PAREN", 
-                      "CLOSE_PAREN", "OPEN_BRACE", "CLOSE_BRACE", "OPEN_BRACKET", 
-                      "CLOSE_BRACKET", "COMMA", "COLON", "DOT", "INT", "STR", 
-                      "BOOLEAN", "NONE", "IDENTIFIER", "NEWLINE", "WS", 
-                      "COMMENT" ]
+    symbolicNames = [ "<INVALID>", "NUMBER", "STRING", "TRUE", "FALSE", 
+                      "FORREAL", "FOR", "IF", "THO", "IDK", "NAHH", "GOBACK", 
+                      "IN", "PLUS", "MINUS", "STAR", "SLASH", "EQEQUAL", 
+                      "NOTEQUAL", "EQUAL", "OPEN_PAREN", "CLOSE_PAREN", 
+                      "OPEN_BRACE", "CLOSE_BRACE", "OPEN_BRACKET", "CLOSE_BRACKET", 
+                      "COMMA", "COLON", "DOT", "INT", "STR", "BOOLEAN", 
+                      "NONE", "IDENTIFIER", "NEWLINE", "WS", "COMMENT" ]
 
     RULE_program = 0
     RULE_statements = 1
@@ -147,37 +159,40 @@ class YoScriptParser ( Parser ):
     EOF = Token.EOF
     NUMBER=1
     STRING=2
-    FORREAL=3
-    FOR=4
-    IF=5
-    IDK=6
-    NAHH=7
-    GOBACK=8
-    IN=9
-    PLUS=10
-    MINUS=11
-    STAR=12
-    SLASH=13
-    EQEQUAL=14
-    NOTEQUAL=15
-    EQUAL=16
-    OPEN_PAREN=17
-    CLOSE_PAREN=18
-    OPEN_BRACE=19
-    CLOSE_BRACE=20
-    OPEN_BRACKET=21
-    CLOSE_BRACKET=22
-    COMMA=23
-    COLON=24
-    DOT=25
-    INT=26
-    STR=27
-    BOOLEAN=28
-    NONE=29
-    IDENTIFIER=30
-    NEWLINE=31
-    WS=32
-    COMMENT=33
+    TRUE=3
+    FALSE=4
+    FORREAL=5
+    FOR=6
+    IF=7
+    THO=8
+    IDK=9
+    NAHH=10
+    GOBACK=11
+    IN=12
+    PLUS=13
+    MINUS=14
+    STAR=15
+    SLASH=16
+    EQEQUAL=17
+    NOTEQUAL=18
+    EQUAL=19
+    OPEN_PAREN=20
+    CLOSE_PAREN=21
+    OPEN_BRACE=22
+    CLOSE_BRACE=23
+    OPEN_BRACKET=24
+    CLOSE_BRACKET=25
+    COMMA=26
+    COLON=27
+    DOT=28
+    INT=29
+    STR=30
+    BOOLEAN=31
+    NONE=32
+    IDENTIFIER=33
+    NEWLINE=34
+    WS=35
+    COMMENT=36
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -291,7 +306,7 @@ class YoScriptParser ( Parser ):
             self.state = 50
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==31:
+            while _la==34:
                 self.state = 47
                 self.match(YoScriptParser.NEWLINE)
                 self.state = 52
@@ -314,7 +329,7 @@ class YoScriptParser ( Parser ):
                         self.state = 57 
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        if not (_la==31):
+                        if not (_la==34):
                             break
 
                     self.state = 59
@@ -654,7 +669,7 @@ class YoScriptParser ( Parser ):
             self.state = 101
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==31:
+            while _la==34:
                 self.state = 98
                 self.match(YoScriptParser.NEWLINE)
                 self.state = 103
@@ -663,14 +678,6 @@ class YoScriptParser ( Parser ):
 
             self.state = 104
             self.match(YoScriptParser.CLOSE_BRACE)
-            self.state = 106
-            self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
-            if la_ == 1:
-                self.state = 105
-                self.match(YoScriptParser.NEWLINE)
-
-
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -690,8 +697,11 @@ class YoScriptParser ( Parser ):
         def IF(self):
             return self.getToken(YoScriptParser.IF, 0)
 
-        def cond_paren(self):
-            return self.getTypedRuleContext(YoScriptParser.Cond_parenContext,0)
+        def cond_paren(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(YoScriptParser.Cond_parenContext)
+            else:
+                return self.getTypedRuleContext(YoScriptParser.Cond_parenContext,i)
 
 
         def block(self, i:int=None):
@@ -700,6 +710,18 @@ class YoScriptParser ( Parser ):
             else:
                 return self.getTypedRuleContext(YoScriptParser.BlockContext,i)
 
+
+        def NEWLINE(self, i:int=None):
+            if i is None:
+                return self.getTokens(YoScriptParser.NEWLINE)
+            else:
+                return self.getToken(YoScriptParser.NEWLINE, i)
+
+        def THO(self, i:int=None):
+            if i is None:
+                return self.getTokens(YoScriptParser.THO)
+            else:
+                return self.getToken(YoScriptParser.THO, i)
 
         def IDK(self):
             return self.getToken(YoScriptParser.IDK, 0)
@@ -731,19 +753,74 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 108
+            self.state = 106
             self.match(YoScriptParser.IF)
-            self.state = 109
+            self.state = 107
             self.cond_paren()
-            self.state = 110
-            self.block()
-            self.state = 113
+            self.state = 109
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==6:
-                self.state = 111
+            if _la==34:
+                self.state = 108
+                self.match(YoScriptParser.NEWLINE)
+
+
+            self.state = 111
+            self.block()
+            self.state = 124
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 113
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+                    if _la==34:
+                        self.state = 112
+                        self.match(YoScriptParser.NEWLINE)
+
+
+                    self.state = 115
+                    self.match(YoScriptParser.THO)
+                    self.state = 116
+                    self.cond_paren()
+                    self.state = 118
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+                    if _la==34:
+                        self.state = 117
+                        self.match(YoScriptParser.NEWLINE)
+
+
+                    self.state = 120
+                    self.block() 
+                self.state = 126
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,12,self._ctx)
+
+            self.state = 135
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
+            if la_ == 1:
+                self.state = 128
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==34:
+                    self.state = 127
+                    self.match(YoScriptParser.NEWLINE)
+
+
+                self.state = 130
                 self.match(YoScriptParser.IDK)
-                self.state = 112
+                self.state = 132
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if _la==34:
+                    self.state = 131
+                    self.match(YoScriptParser.NEWLINE)
+
+
+                self.state = 134
                 self.block()
 
 
@@ -799,11 +876,11 @@ class YoScriptParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_cond_paren)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 115
+            self.state = 137
             self.match(YoScriptParser.OPEN_PAREN)
-            self.state = 116
+            self.state = 138
             self.expression()
-            self.state = 117
+            self.state = 139
             self.match(YoScriptParser.CLOSE_PAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -853,13 +930,13 @@ class YoScriptParser ( Parser ):
         self.enterRule(localctx, 16, self.RULE_break_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 119
+            self.state = 141
             self.match(YoScriptParser.NAHH)
-            self.state = 121
+            self.state = 143
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,16,self._ctx)
             if la_ == 1:
-                self.state = 120
+                self.state = 142
                 self.match(YoScriptParser.NEWLINE)
 
 
@@ -916,21 +993,21 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 123
+            self.state = 145
             self.match(YoScriptParser.GOBACK)
-            self.state = 125
+            self.state = 147
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1075973126) != 0):
-                self.state = 124
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 8607784990) != 0):
+                self.state = 146
                 self.expression()
 
 
-            self.state = 128
+            self.state = 150
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,13,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,18,self._ctx)
             if la_ == 1:
-                self.state = 127
+                self.state = 149
                 self.match(YoScriptParser.NEWLINE)
 
 
@@ -993,15 +1070,15 @@ class YoScriptParser ( Parser ):
         self.enterRule(localctx, 20, self.RULE_for_stmt)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 130
+            self.state = 152
             self.match(YoScriptParser.FOR)
-            self.state = 131
+            self.state = 153
             self.match(YoScriptParser.IDENTIFIER)
-            self.state = 132
+            self.state = 154
             self.match(YoScriptParser.IN)
-            self.state = 133
+            self.state = 155
             self.expression()
-            self.state = 134
+            self.state = 156
             self.block()
         except RecognitionException as re:
             localctx.exception = re
@@ -1039,8 +1116,11 @@ class YoScriptParser ( Parser ):
             return self.getTypedRuleContext(YoScriptParser.Param_listContext,0)
 
 
-        def NEWLINE(self):
-            return self.getToken(YoScriptParser.NEWLINE, 0)
+        def NEWLINE(self, i:int=None):
+            if i is None:
+                return self.getTokens(YoScriptParser.NEWLINE)
+            else:
+                return self.getToken(YoScriptParser.NEWLINE, i)
 
         def getRuleIndex(self):
             return YoScriptParser.RULE_func_def
@@ -1069,29 +1149,37 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 136
+            self.state = 158
             self.match(YoScriptParser.FORREAL)
-            self.state = 137
+            self.state = 159
             self.match(YoScriptParser.IDENTIFIER)
-            self.state = 138
+            self.state = 160
             self.match(YoScriptParser.OPEN_PAREN)
-            self.state = 140
+            self.state = 162
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==30:
-                self.state = 139
+            if _la==33:
+                self.state = 161
                 self.param_list()
 
 
-            self.state = 142
+            self.state = 164
             self.match(YoScriptParser.CLOSE_PAREN)
-            self.state = 143
-            self.block()
-            self.state = 145
+            self.state = 166
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,15,self._ctx)
+            _la = self._input.LA(1)
+            if _la==34:
+                self.state = 165
+                self.match(YoScriptParser.NEWLINE)
+
+
+            self.state = 168
+            self.block()
+            self.state = 170
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
             if la_ == 1:
-                self.state = 144
+                self.state = 169
                 self.match(YoScriptParser.NEWLINE)
 
 
@@ -1150,17 +1238,17 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 147
+            self.state = 172
             self.match(YoScriptParser.IDENTIFIER)
-            self.state = 152
+            self.state = 177
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==23:
-                self.state = 148
+            while _la==26:
+                self.state = 173
                 self.match(YoScriptParser.COMMA)
-                self.state = 149
+                self.state = 174
                 self.match(YoScriptParser.IDENTIFIER)
-                self.state = 154
+                self.state = 179
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1210,7 +1298,7 @@ class YoScriptParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_expression)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 155
+            self.state = 180
             self.comparison()
         except RecognitionException as re:
             localctx.exception = re
@@ -1274,22 +1362,22 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 157
+            self.state = 182
             self.arithmetic()
-            self.state = 162
+            self.state = 187
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==14 or _la==15:
-                self.state = 158
+            while _la==17 or _la==18:
+                self.state = 183
                 _la = self._input.LA(1)
-                if not(_la==14 or _la==15):
+                if not(_la==17 or _la==18):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 159
+                self.state = 184
                 self.arithmetic()
-                self.state = 164
+                self.state = 189
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1355,22 +1443,22 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 165
+            self.state = 190
             self.term()
-            self.state = 170
+            self.state = 195
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==10 or _la==11:
-                self.state = 166
+            while _la==13 or _la==14:
+                self.state = 191
                 _la = self._input.LA(1)
-                if not(_la==10 or _la==11):
+                if not(_la==13 or _la==14):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 167
+                self.state = 192
                 self.term()
-                self.state = 172
+                self.state = 197
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1436,22 +1524,22 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 173
+            self.state = 198
             self.factor()
-            self.state = 178
+            self.state = 203
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==12 or _la==13:
-                self.state = 174
+            while _la==15 or _la==16:
+                self.state = 199
                 _la = self._input.LA(1)
-                if not(_la==12 or _la==13):
+                if not(_la==15 or _la==16):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 175
+                self.state = 200
                 self.factor()
-                self.state = 180
+                self.state = 205
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1511,24 +1599,24 @@ class YoScriptParser ( Parser ):
         self.enterRule(localctx, 34, self.RULE_factor)
         self._la = 0 # Token type
         try:
-            self.state = 184
+            self.state = 209
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [1, 2, 17, 21, 30]:
+            if token in [1, 2, 3, 4, 20, 24, 33]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 181
+                self.state = 206
                 self.atom()
                 pass
-            elif token in [10, 11]:
+            elif token in [13, 14]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 182
+                self.state = 207
                 _la = self._input.LA(1)
-                if not(_la==10 or _la==11):
+                if not(_la==13 or _la==14):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 183
+                self.state = 208
                 self.factor()
                 pass
             else:
@@ -1558,6 +1646,12 @@ class YoScriptParser ( Parser ):
 
         def STRING(self):
             return self.getToken(YoScriptParser.STRING, 0)
+
+        def TRUE(self):
+            return self.getToken(YoScriptParser.TRUE, 0)
+
+        def FALSE(self):
+            return self.getToken(YoScriptParser.FALSE, 0)
 
         def list_literal(self):
             return self.getTypedRuleContext(YoScriptParser.List_literalContext,0)
@@ -1602,46 +1696,58 @@ class YoScriptParser ( Parser ):
         localctx = YoScriptParser.AtomContext(self, self._ctx, self.state)
         self.enterRule(localctx, 36, self.RULE_atom)
         try:
-            self.state = 195
+            self.state = 222
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,21,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,27,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 186
+                self.state = 211
                 self.match(YoScriptParser.IDENTIFIER)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 187
+                self.state = 212
                 self.match(YoScriptParser.NUMBER)
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 188
+                self.state = 213
                 self.match(YoScriptParser.STRING)
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 189
-                self.list_literal()
+                self.state = 214
+                self.match(YoScriptParser.TRUE)
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 190
-                self.function_call()
+                self.state = 215
+                self.match(YoScriptParser.FALSE)
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 191
+                self.state = 216
+                self.list_literal()
+                pass
+
+            elif la_ == 7:
+                self.enterOuterAlt(localctx, 7)
+                self.state = 217
+                self.function_call()
+                pass
+
+            elif la_ == 8:
+                self.enterOuterAlt(localctx, 8)
+                self.state = 218
                 self.match(YoScriptParser.OPEN_PAREN)
-                self.state = 192
+                self.state = 219
                 self.expression()
-                self.state = 193
+                self.state = 220
                 self.match(YoScriptParser.CLOSE_PAREN)
                 pass
 
@@ -1708,29 +1814,29 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 197
+            self.state = 224
             self.match(YoScriptParser.OPEN_BRACKET)
-            self.state = 206
+            self.state = 233
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1075973126) != 0):
-                self.state = 198
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 8607784990) != 0):
+                self.state = 225
                 self.expression()
-                self.state = 203
+                self.state = 230
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                while _la==23:
-                    self.state = 199
+                while _la==26:
+                    self.state = 226
                     self.match(YoScriptParser.COMMA)
-                    self.state = 200
+                    self.state = 227
                     self.expression()
-                    self.state = 205
+                    self.state = 232
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
 
 
 
-            self.state = 208
+            self.state = 235
             self.match(YoScriptParser.CLOSE_BRACKET)
         except RecognitionException as re:
             localctx.exception = re
@@ -1788,19 +1894,19 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 210
+            self.state = 237
             self.match(YoScriptParser.IDENTIFIER)
-            self.state = 211
+            self.state = 238
             self.match(YoScriptParser.OPEN_PAREN)
-            self.state = 213
+            self.state = 240
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1075973126) != 0):
-                self.state = 212
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 8607784990) != 0):
+                self.state = 239
                 self.arg_list()
 
 
-            self.state = 215
+            self.state = 242
             self.match(YoScriptParser.CLOSE_PAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -1858,17 +1964,17 @@ class YoScriptParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 217
+            self.state = 244
             self.expression()
-            self.state = 222
+            self.state = 249
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==23:
-                self.state = 218
+            while _la==26:
+                self.state = 245
                 self.match(YoScriptParser.COMMA)
-                self.state = 219
+                self.state = 246
                 self.expression()
-                self.state = 224
+                self.state = 251
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 

@@ -1,6 +1,6 @@
 # YoScript – interpreter języka inspirowanego Pythonem
 
-**YoScript** to lekki, edukacyjny język skryptowy z „młodzieżowym” słownictwem (np. `forreal`, `nahh`, `goback`) i blokami oznaczanymi nawiasami klamrowymi `{}` zamiast wcięć. Jego celem jest poznanie zasad budowy interpreterów przy użyciu ANTLR 4.
+**YoScript** to lekki, edukacyjny język skryptowy z „młodzieżowym” słownictwem (np. `forreal`, `nahh`, `goback`), warunkami otoczonymi `()` w instrukcjach warunkowych oraz blokami oznaczanymi nawiasami klamrowymi `{}` zamiast wcięć. Jego celem jest poznanie zasad budowy interpreterów przy użyciu ANTLR 4.
 
 ---
 
@@ -35,41 +35,44 @@
 
 ## 4. Opis tokenów
 
-| Token           | Lexem               | Znaczenie                       |
-|-----------------| ------------------- |---------------------------------|
-| `NUMBER`        | `123.45`            | liczba                          |
-| `STRING`        | `"abc"` lub `'abc'` | ciąg znaków                     |
-| `FORREAL`       | `forreal`           | definicja funkcji               |
-| `FOR`           | `for`               | pętla                           |
-| `IF`            | `if`                | warunek                         |
-| `IDK`           | `idk`               | else                            |
-| `NAHH`          | `nahh`              | break                           |
-| `GOBACK`        | `goback`            | return                          |
-| `IN`            | `in`                | słowo-klucz pętli               |
-| `PLUS`          | `+`                 | dodawanie                       |
-| `MINUS`         | `-`                 | odejmowanie                     |
-| `STAR`          | `*`                 | mnożenie                        |
-| `SLASH`         | `/`                 | dzielenie                       |
-| `EQEQUAL`       | `==`                | równość                         |
-| `NOTEQUAL`      | `!=`                | nierówność                      |
-| `EQUAL`         | `=`                 | przypisanie                     |
-| `OPEN_PAREN`    | `(`                 | nawias otwierający              |
-| `CLOSE_PAREN`   | `)`                 | nawias zamykający               |
-| `OPEN_BRACE`    | `{`                 | początek bloku                  |
-| `CLOSE_BRACE`   | `}`                 | koniec bloku                    |
-| `OPEN_BRACKET`  | `[`                 | początek listy                  |
-| `CLOSE_BRACKET` | `]`                 | koniec listy                    |
-| `COMMA`         | `,`                 | separator                       |
-| `COLON`         | `:`                 | (rezerwowane na adnotacje typu) |
-| `DOT`           | `.`                 | notacja dostępu                 |
-| `INT`           | `int`               | typ integer                     |
-| `STR`           | `str`               | typ string                      |
-| `BOOLEAN`       | `bool`              | typ boolean                     |
-| `NONE`          | `none`              | typ None/null                   |
-| `IDENTIFIER`    | `x`, `foo`          | nazwa zmiennej/funkcji          |
-| `NEWLINE`       | `'\r'? '\n'`          | nowa linia                      |
-| `WS`            | `[ \t]+ -> skip`          | whitespace                      |
-| `COMMENT`       | `'#' ~[\r\n]* -> skip`          | komentarz                       |
+| Token           | Lexem                  | Znaczenie                       |
+|-----------------|------------------------|---------------------------------|
+| `NUMBER`        | `123.45`               | liczba                          |
+| `STRING`        | `"abc"`                | ciąg znaków                     |
+| `TRUE`          | `yep`                  | literał true                    |
+| `FALSE`         | `nope`                 | literał false                   |
+| `FORREAL`       | `forreal`              | definicja funkcji               |
+| `FOR`           | `for`                  | pętla                           |
+| `IF`            | `if`                   | warunek                         |
+| `THO`           | `tho`                  | elif                            |
+| `IDK`           | `idk`                  | else                            |
+| `NAHH`          | `nahh`                 | break                           |
+| `GOBACK`        | `goback`               | return                          |
+| `IN`            | `in`                   | słowo-klucz pętli               |
+| `PLUS`          | `+`                    | dodawanie                       |
+| `MINUS`         | `-`                    | odejmowanie                     |
+| `STAR`          | `*`                    | mnożenie                        |
+| `SLASH`         | `/`                    | dzielenie                       |
+| `EQEQUAL`       | `==`                   | równość                         |
+| `NOTEQUAL`      | `!=`                   | nierówność                      |
+| `EQUAL`         | `=`                    | przypisanie                     |
+| `OPEN_PAREN`    | `(`                    | nawias otwierający              |
+| `CLOSE_PAREN`   | `)`                    | nawias zamykający               |
+| `OPEN_BRACE`    | `{`                    | początek bloku                  |
+| `CLOSE_BRACE`   | `}`                    | koniec bloku                    |
+| `OPEN_BRACKET`  | `[`                    | początek listy                  |
+| `CLOSE_BRACKET` | `]`                    | koniec listy                    |
+| `COMMA`         | `,`                    | separator                       |
+| `COLON`         | `:`                    | (rezerwowane na adnotacje typu) |
+| `DOT`           | `.`                    | notacja dostępu                 |
+| `INT`           | `int`                  | typ integer                     |
+| `STR`           | `str`                  | typ string                      |
+| `BOOLEAN`       | `bool`                 | typ boolean                     |
+| `NONE`          | `none`                 | typ None/null                   |
+| `IDENTIFIER`    | `x`, `foo`             | nazwa zmiennej/funkcji          |
+| `NEWLINE`       | `'\r'? '\n'`           | nowa linia                      |
+| `WS`            | `[ \t]+ -> skip`       | whitespace                      |
+| `COMMENT`       | `'#' ~[\r\n]* -> skip` | komentarz                       |
 
 ---
 
@@ -78,10 +81,6 @@
 ### ANTLR 4 (YoScript.g4 excerpt)
 
 ```antlr
-grammar YoScript;
-
-// ───── Parser ─────────────────────────────────────────
-
 program         : statements EOF ;
 
 // ogólna sekwencja instrukcji
@@ -92,8 +91,8 @@ statement
     | assignment
     | if_stmt
     | for_stmt
-    | break_stmt           
-    | return_stmt          
+    | break_stmt
+    | return_stmt
     | func_def
     ;
 
@@ -102,8 +101,10 @@ expression_stmt : expression NEWLINE? ;
 assignment      : IDENTIFIER EQUAL expression NEWLINE? ;
 
 // ─── sterowanie ─────────────
-block           : OPEN_BRACE NEWLINE* statements NEWLINE* CLOSE_BRACE NEWLINE? ;
-if_stmt         : IF cond_paren block (IDK block)? ;
+block           : OPEN_BRACE NEWLINE* statements NEWLINE* CLOSE_BRACE;
+if_stmt         : IF cond_paren NEWLINE? block
+                    (NEWLINE? THO cond_paren NEWLINE? block)*
+                    (NEWLINE? IDK NEWLINE? block)? ;
 cond_paren      : OPEN_PAREN expression CLOSE_PAREN ;
 break_stmt      : NAHH NEWLINE? ;
 return_stmt     : GOBACK expression? NEWLINE? ;
@@ -112,7 +113,7 @@ return_stmt     : GOBACK expression? NEWLINE? ;
 for_stmt        : FOR IDENTIFIER IN expression block ;
 
 // ─── funkcje ────────────────
-func_def        : FORREAL IDENTIFIER OPEN_PAREN param_list? CLOSE_PAREN block NEWLINE? ;
+func_def        : FORREAL IDENTIFIER OPEN_PAREN param_list? CLOSE_PAREN NEWLINE? block NEWLINE? ;
 param_list      : IDENTIFIER (COMMA IDENTIFIER)* ;
 
 // ─── wyrażenia ──────────────
@@ -126,15 +127,17 @@ atom
     : IDENTIFIER
     | NUMBER
     | STRING
+    | TRUE
+    | FALSE
     | list_literal
     | function_call
     | OPEN_PAREN expression CLOSE_PAREN
     ;
 
-// ── literał listy  [1, 2, 3] ──────────────
+// literał listy  [1, 2, 3]
 list_literal    : OPEN_BRACKET (expression (COMMA expression)*)? CLOSE_BRACKET ;
 
-// ─── wywołanie funkcji ──────────────
+// wywołanie funkcji
 function_call   : IDENTIFIER OPEN_PAREN arg_list? CLOSE_PAREN ;
 arg_list        : expression (COMMA expression)* ;
 ```
@@ -259,8 +262,16 @@ a != b: True
 
 ## 9. Obsługa błędów
 
-* **Błędy semantyczne/runtime:**
+Interpreter YoScript rzuca wyjątki (głównie `RuntimeError` lub `NameError`) z czytelnymi komunikatami zawierającymi numer linii w następujących przypadkach:
 
-  * `NameError` przy odwołaniu do niezdefiniowanej zmiennej lub funkcji,
-  * `RuntimeError("‘nahh’ użyte poza pętlą")`,
-  * `ReturnSignal` i `BreakSignal` – wyjątki-sygnały sterujące przepływem.
+| Błąd                                         | Wyjątek      | Przykładowy komunikat                                   |
+|----------------------------------------------|--------------|---------------------------------------------------------|
+| Dzielenie przez zero                         | `RuntimeError` | `Division by zero at line {line}`                       |
+| Niezdefiniowana zmienna                      | `NameError`    | `Variable 'x' not defined`                              |
+| Nie-booleanowy warunek w `if`/`tho`          | `RuntimeError` | `If condition must be boolean at line {line}`           |
+| `break` poza pętlą                           | `RuntimeError` | `'nahh' used outside the loop at line {line}`           |
+| `return` poza funkcją                        | `RuntimeError` | `'goback' used outside the function at line {line}`     |
+| Wywołanie niezdefiniowanej funkcji           | `RuntimeError` | `Function 'foo' not defined`                            |
+| Niewłaściwa liczba argumentów wywołania      | `RuntimeError` | `Function 'foo' expects N args, got M`                  |
+
+Każdy wyjątek jest podnoszony tuż w momencie wykrycia błędu i przechwytywany (w przypadku `break` i `return` poza odpowiednimi kontekstami) na poziomie `visitProgram`, aby użytkownik otrzymał tylko swój komunikat bez pełnego stack trace’a.  

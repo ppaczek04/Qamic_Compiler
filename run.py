@@ -10,7 +10,14 @@ def run_file(filename):
     tokens = CommonTokenStream(lexer)
     parser = YoScriptParser(tokens)
     tree = parser.program()
-    RuntimeVisitor().visit(tree)
+    try:
+        RuntimeVisitor().visit(tree)
+    except RuntimeError as e:
+        print(f"Runtime error: {e}")
+        sys.exit(1)
+    except NameError as e:
+        print(f"Name error: {e}")
+        sys.exit(1)
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
